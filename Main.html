@@ -3,21 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Escritorio Takamassa Nomuro</title>
+    <title>Takamassa Nomuro</title>
     <link rel="stylesheet" href="css/Estilo.css" />
+    <style>
+      /* Adicione o estilo do botão e do dropdown aqui */
+      .dropdown-btn {
+        background-color: white;
+        color: black;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .dropdown-btn::after {
+        content: "\2630"; /* Código Unicode para três traços horizontais */
+        font-size: 30px;
+        margin-left: 8px;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .dropdown-btn:hover .dropdown-content {
+        display: block;
+      }
+    </style>
   </head>
 
   <body>
     <div id="icone"></div>
+    <a href="#"><img class="icon" src="../img/tn.jpg" /></a>
+    <div id="iconee"></div>
+
+    >
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <ul>
+      <li>
+        <a href="Quemsomos" style="font-size: 30px" class="link">Quem Somos</a
+        ><br />
+      </li>
+      <li>
+        <a href="clientes" style="font-size: 30px" class="link">Clientes</a
+        ><br />
+      </li>
+      <li>
+        <a href="faleconosco" style="font-size: 30px" class="link"
+          >Fale Conosco</a
+        ><br />
+      </li>
+    </ul>
+    <div class="dropdown">
+      <button style="font-size: 30px" class="dropdown-btn">Menu</button>
+      <div class="dropdown-content">
+        <a style="font-size: 30px" href="Login.html">Login</a>
+        <a style="font-size: 30px" href="cadastro.html">Cadastro</a>
+        <a style="font-size: 30px" href="Cadastroadv.html">Cadastro de Adv</a>
+      </div>
     </div>
-    <h1 class="center">Seja Bem-Vindo</h1>
-    <br />
-    <h2 class="center fonte-70">Takamassa Nomuro Escritório de Advocacia</h2> 
-    <br><br><br>
 
-    
-
-    <a href="Cadastro.html" class="hover link" style="font-size: 30px;">Cadastro</a>></a>
-    
+    <!-- Adicione o seguinte script para tornar o dropdown funcional -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var dropdownBtn = document.querySelector(".dropdown-btn");
+        dropdownBtn.addEventListener("click", function () {
+          var dropdownContent = document.querySelector(".dropdown-content");
+          dropdownContent.style.display =
+            dropdownContent.style.display === "block" ? "none" : "block";
+        });
+      });
+    </script>
   </body>
 </html>

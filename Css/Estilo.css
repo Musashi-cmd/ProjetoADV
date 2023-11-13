@@ -1,34 +1,43 @@
 body {
-  background-color: black;
-  margin: 0;
-  padding: 0;
+  background-image: url(../../img/branco.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #icone {
+  /* minha id do icone TN*/
   position: fixed;
   top: 10px;
   left: 10px;
-  width: 300px;
-  height: 300px;
-  background-image: url("../../img/lawfirm.jpg");
+  width: 250px;
+  height: 250px;
+  background-image: url("../../img/tn.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#iconee {
+  /* minha id do icone escritorio*/
+  position: fixed;
+
+  float: left;
+  width: 1400px;
+  height: 1200px;
+  background-image: url(../../img/taka.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-h1,
+h1,     /*  todo h1 fica no centro, usar h2 para outras posiões */
 .center,
 .fonte-70,
 #lambreta {
   text-align: center;
-  color: gold;
+  color: black;
   font-size: 40px;
 }
 
-.center {
-  /* A cor será dourada */
-}
-
 #lambreta {
+  /* id de teste, se trata do fundo branco com letras vermelhas, possivel troca */
   color: red;
   border: 10px double;
   border-radius: 50px;
@@ -38,27 +47,108 @@ h1,
 }
 
 .botao:hover {
+  /*class=" hover" */
   background-size: cover;
   background-color: blue;
 }
 
 .borda {
+  /*sem borda mas pode trocar, complemento do hover  */
   color: red;
   text-decoration: none;
   padding: 3px;
 }
 
 .espaco {
+  /*teste de espaço pra centralizar */
   text-align: center;
   background: /* Adicione a cor desejada */ ;
 }
 
 .link {
-  color: rgb(47, 0, 255);
+  /*link basico com hover*/
+  color: black;
   text-decoration: none;
   margin-right: 10px; /* Espaçamento entre os links */
 }
 
 .link:hover {
   text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+.southland-font {
+  /*class southland mas não ficou igual */
+  font-family: "Southland";
+}
+
+.Login {
+  /* float pra alinhar no canto direito o login, não está mais utilizado, pode ser feito com display: inline-block*/
+  float: right;
+}
+.Cadastro {
+  /* msm coisa do login */
+  float: right;
+}
+
+ul {
+  /* fundo pra complemento de "li", links */
+  background: white;
+  text-decoration: none;
+  text-align: center;
+}
+li {
+  /* link centralizado um ao lado do outro */
+  display: inline-block;
+  padding: 0.5%;
+  text-align: center;
+  list-style-type: none;
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-btn {
+  /* meu botão de drop down, testar outros tipos de cursor e talvez uma borda fina preta */
+  background-color: white;
+  color: black;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Adicione o ícone de três traços */
+.dropdown-btn::after {
+  content: "\2630"; /* Código Unicode para três traços horizontais */
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+/* Estilize o conteúdo do dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* a box hover do dropdown não fica muito escura */
+  z-index: 1;
+}
+
+/* Estilize os itens do dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Mude a cor do item do dropdown quando o mouse passar por cima */
+.dropdown-content a:hover {
+  background-color: black;
+}
+
+/* Exiba o dropdown quando o botão for clicado */
+.dropdown-btn:hover .dropdown-content {
+  display: block;
 }
