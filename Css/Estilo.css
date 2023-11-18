@@ -1,14 +1,18 @@
 body {
-  background-image: url(../../img/branco.png);
+  background-image: url(/ProjetoPhp/Css/img/brancojpg.jpg);
+
   background-repeat: no-repeat;
   background-size: cover;
+}
+.form-container {
+  max-width: 350px;
+  padding: 1rem;
 }
 
 #icone {
   /* minha id do icone TN*/
-  position: fixed;
+  position: absolute;
   top: 10px;
-  left: 10px;
   width: 250px;
   height: 250px;
   background-image: url("../../img/tn.jpg");
@@ -17,17 +21,18 @@ body {
 }
 #iconee {
   /* minha id do icone escritorio*/
-  position: fixed;
-
+  position: absolute;
   float: left;
+  top: 207px;
+  left: 20px;
   width: 1400px;
   height: 1200px;
-  background-image: url(../../img/taka.png);
+  background-image: url(/ProjetoPhp/Css/img/taka.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-h1,     /*  todo h1 fica no centro, usar h2 para outras posiões */
+h1,     /*  todo h1 fica no centro, usar h2 para outras posições */
 .center,
 .fonte-70,
 #lambreta {
@@ -49,7 +54,7 @@ h1,     /*  todo h1 fica no centro, usar h2 para outras posiões */
 .botao:hover {
   /*class=" hover" */
   background-size: cover;
-  background-color: blue;
+  background-color: red;
 }
 
 .borda {
@@ -89,9 +94,17 @@ h1,     /*  todo h1 fica no centro, usar h2 para outras posiões */
   float: right;
 }
 
+p {
+  /*PARAGRAFO */
+  text-align: center;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: white;
+  color: black;
+}
 ul {
   /* fundo pra complemento de "li", links */
-  background: white;
+
   text-decoration: none;
   text-align: center;
 }
@@ -151,4 +164,49 @@ li {
 /* Exiba o dropdown quando o botão for clicado */
 .dropdown-btn:hover .dropdown-content {
   display: block;
+}
+
+.rotate {
+  /* animação de rotação infinita a cada 5s */
+  animation: spin 5s linear infinite;
+}
+
+.gradient-button {
+  /* botão grandiente da direita para esquerda, na ordem de cor vermelho, azul, roxo, verde. verde claro e amarelo */
+  background: linear-gradient(
+    to right,
+    red,
+    purple,
+    green,
+    orange,
+    blue,
+    darkblue,
+    lightblue,
+    red,
+    pink,
+    greenyellow
+  );
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.Jurubeba {
+  background: radial-gradient(
+    to top,
+    red,
+    blue,
+    lightblue,
+    green,
+    lightgreen,
+    yellow,
+    gold
+  );
 }

@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+#theme-toggle .icon {
+  margin-right: 5px;
+}
+
+#theme-toggle:checked {
+  background-color: #3498db; /* Cor de destaque quando ativado */
+}
+
+#theme-toggle:checked .icon {
+  transform: rotate(180deg);
+}
+
+#theme-toggle:focus {
+  box-shadow: 0 0 5px rgba(52, 152, 219, 1);
+}
+
+#theme-toggle .icon-light::before {
+  content: "\2600"; /* Unicode para o ícone de sol */
+}
+
+#theme-toggle .icon-dark::before {
+  content: "\263E"; /* Unicode para o ícone de lua */
+}
+
+/* Tema Light */
+#theme-toggle:not(:checked) + body.theme-light {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Tema Dark */
+#theme-toggle:checked + body.theme-dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Transições suaves */
+body.theme-light,
+body.theme-dark {
+  transition: background-color 0.3s, color 0.3s;
+}
