@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/ProjetoPhp/Css/Dark&light.css" />
+    <link rel="stylesheet" href="/ProjetoPhp/Css/Estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fleur+De+Leah&family=Great+Vibes&family=Mea+Culpa&family=Nabla&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Login</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <input type="checkbox" class="checkbox" id="chk" />
+        <label class="label" for="chk">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <div class="ball"></div>
+        </label>
+      </div>
+
+      <div>
+        <h1
+          class="Jurubeba"
+          style="font-size: 70px; font-family: Mea culpa, cursive"
+        >
+          Takamassa Nomuro
+        </h1>
+        <nav class="link" style="display: inline-block">
+          <a href="Quemsomos.html">Quem Somos</a>
+          <a href="Faleconosco.html">Fale conosco</a>
+          <a href="Endereco.html"> Endereço</a>
+        </nav>
+      </div>
+      <div class="dropdown">
+      <button
+        style="font-size: 30px; font-family: Fleur De Leah"
+        class="dropdown-btn"
+      >
+        Menu
+      </button>
+      <div class="dropdown-content">
+        <a
+          style="font-size: 20px; font-family: Dancing Script"
+          href="Login.html"
+          >Login</a
+        >
+        <a
+          style="font-size: 20px; font-family: Dancing Script"
+          href="cadastro.html"
+          >Cadastro</a
+        >
+        <a
+          style="font-size: 20px; font-family: Dancing Script"
+          href="Cadastroadv.html"
+          >Cadastro de Adv</a
+        >
+      </div>
+
+      <script
+        src="https://kit.fontawesome.com/998c60ef77.js"
+        crossorigin="anonymous"
+      ></script>
+      <script src="script.js"></script>
+      <script>
+        const chk = document.getElementById("chk");
+        chk.addEventListener("change", () => {
+          document.body.classList.toggle("dark");
+        });
+      </script>
+    </div>
+  </body>
+</html>

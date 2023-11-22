@@ -1,3 +1,11 @@
+body {
+  background-image: url(/ProjetoPhp/img/branco.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .form-container {
   max-width: 350px;
   padding: 1rem;
@@ -26,9 +34,6 @@
   background-repeat: no-repeat;
 }
 
-h1,     /*  todo h1 fica no centro, usar h2 para outras posições */
-.center,
-.fonte-70,
 #lambreta {
   text-align: center;
   color: black;
@@ -114,57 +119,6 @@ li {
   color: black;
 }
 
-.dropdown-btn {
-  /* meu botão de drop down, testar outros tipos de cursor e talvez uma borda fina preta */
-  background-color: white;
-  color: black;
-  padding: 12px;
-  font-size: 10px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-}
-
-/* Adicione o ícone de três traços */
-.dropdown-btn::after {
-  content: "\2630"; /* Código Unicode para três traços horizontais */
-  font-size: 5px;
-  margin-left: 4px;
-}
-
-/* Estilize o conteúdo do dropdown */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: black;
-  min-width: 100px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* a box hover do dropdown não fica muito escura */
-  z-index: 1;
-}
-
-/* Estilize os itens do dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Mude a cor do item do dropdown quando o mouse passar por cima */
-.dropdown-content a:hover {
-  background-color: black;
-}
-
-/* Exiba o dropdown quando o botão for clicado */
-.dropdown-btn:hover .dropdown-content {
-  display: block;
-}
-
-.rotate {
-  /* animação de rotação infinita a cada 5s */
-  animation: spin 5s linear infinite;
-}
-
 .gradient-button {
   /* botão grandiente da direita para esquerda, na ordem de cor vermelho, azul, roxo, verde. verde claro e amarelo */
   background: linear-gradient(
@@ -181,7 +135,7 @@ li {
     greenyellow
   );
   border: none;
-  color: white;
+  color: gray;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
